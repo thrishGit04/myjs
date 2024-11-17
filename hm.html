@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthMate</title>
+    <link rel="stylesheet" href="hm.css">
+</head>
+<body>
+    <div id="homePage" class="page hidde">
+        <h1 class="welcome-title">WELCOME TO</h1>
+        <h2 class="healthmate-title">HEALTHMATE</h2>
+        <button id="doctorButton" class="button">Doctor</button>
+        <p class="or-text">OR</p>
+        <button id="patientButton" class="button">Patient</button>
+        <p class="or-text">OR</p>
+        <button id="hospitalButton" class="button">Hospital</button>
+    </div>
+
+    <div id="signInPage" class="page hidden">
+        <h1 class="sign-heading">Sign IN</h1>
+        <form id="loginForm">
+          <input type="text" id="username" placeholder="Enter User Name" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit" class="sign-in-btn">Sign in</button>
+        <p class="signup-text">Don't have an account?</p>
+        <button type="submit" id="signUpButton" class="sign-up-btn">Sign up</button>
+        </form>
+    </div>
+
+    <div id="signUpPage" class ="page hidden">
+        <h1>Create your Account!</h1>
+        <form id="signupForm">
+            <div style="text-align: center;" class="container">
+                <img src="png1.png" alt="User" id="userpng">
+            </div>
+            <form>
+                <input type="text" id="newUsername" placeholder="Enter User Name" required>
+                <input type="password" id="newPassword" placeholder="Create Password" required>
+                <input type="password" id="conPassword" placeholder="Confirm Password" required>
+            </form>
+            <form id="checkbox">
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="conditions" value="Terms and conditions" required>
+                     Accept terms and conditions
+                </label>
+            <button type="submit" id="signInButton" class="sign-in-btn">LOGIN</button>
+            <p>Having any issues?<button class="clickhere">Click here</button></p>
+        </form>
+    </div>
+        
+    <div id="licensePage" class="page hidden">
+        <h1>Hello</h1>
+        <img src="png1.png" class="user">
+        <form>
+        <input type="text" id="license number" placeholder="Enter License Number" required>
+        <input type="text" id="phoneNumber" placeholder="Phone Number" required>
+        </form>
+        <button id="numberOtp" class="otp">Send OTP</button>
+        <form>
+        <input type="text" id="enterNumberOtp" placeholder="Enter OTP" class="numotp" required>
+        <input type="text" id="email" placeholder="Enter your Email id">
+        </form>
+        <button id="emailOtp" class="otp">Send OTP</button>
+        <form>
+        <input type="text" id="emailOtp1" placeholder="Enter OTP" required>
+        <button id="nextButton" class="next">Next</button>
+        </form>
+    </div>
+
+    <div id="doctorsDocumentPage" class="page hidden">
+        <h1>Hello</h1>
+        <h2>Dr. XYZ</h2>
+        
+        <!-- Certificate Upload -->
+        <label for="certificateUpload">Upload your certificate:</label>
+        <input type="file" id="certificateUpload" required>
+        <button id="certificateUploadButton" class="upload">Upload</button>
+        <p id="certificateStatus"></p>
+        
+        <!-- License Document Upload -->
+        <label for="licenseUpload">Upload your license document:</label>
+        <input type="file" id="licenseUpload" required>
+        <button id="licenseUploadButton" class="upload">Upload</button>
+        <p id="licenseStatus"></p>
+        
+        <p>Your uploaded documents:</p>
+        <img src="documents.png" class="document1">
+        
+        <button id="submitDocuments" class="submit">Submit</button>
+    </div>
+    
+
+    <div id="schedulingPage" class="page hidden">
+        <h1>Schedule Your Time</h1>
+    
+        <!-- Hospital Name Input -->
+        <div class="form-group">
+            <label for="hospitalname">Hospital:</label>
+            <input type="text" id="hospitalname" placeholder="Enter Hospital Name" required>
+        </div>
+    
+        <h2>Set Your Working Hours</h2>
+        <table class="time-table">
+            <!-- Hour Input -->
+            <tr>
+                <td><label for="hours">Hour:</label></td>
+                <td>
+                    <input type="number" id="hours" name="hours" min="1" max="12" value="12" required>
+                </td>
+            </tr>
+            <!-- Minute Input -->
+            <tr>
+                <td><label for="minutes">Minute:</label></td>
+                <td>
+                    <input type="number" id="minutes" name="minutes" min="0" max="59" value="00" required>
+                </td>
+            </tr>
+            <!-- AM/PM Selection -->
+            <tr>
+                <td><label for="ampm">AM/PM:</label></td>
+                <td>
+                    <select id="ampm" name="ampm" required>
+                        <option value="AM">AM</option>
+                        <option value="PM">PM</option>
+                    </select>
+                </td>
+            </tr>
+            <!-- Select Time Button -->
+            <tr>
+                <td colspan="2" class="button-container">
+                    <button type="button" class="selectTime">Select Time</button>
+                </td>
+            </tr>
+        </table>
+    
+        <!-- Display Selected Time -->
+        <div id="selectedTime" class="time-display"></div>
+    
+        <!-- Next Button -->
+        <div class="form-group button-container">
+            <button type="button" class="next">Next</button>
+        </div>
+    </div>
+    
+
+    <div id="PatientSignInPage" class="page hidden">
+        <h1>Sign IN</h1>
+        <form id="loginForm">
+          <input type="text" id="username" placeholder="Enter User Name" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="button" class="sign-in-btn" id="PsignIn">Sign in</button>
+        </form>
+        <form id="signup">
+        <p class="signup-text">Don't have an account?</p>
+        <button type = "button" id="PsignUp" class="sign-up-btn">Sign up</button>
+        </form>
+    </div>
+
+    <div id="PatientAadhar" class="page hidden">
+        <h1>Hello</h1>
+        <img src="png1.png" height="100px" width="100px">
+        <form>
+        <input type="text" id="Aadharnumber" placeholder="Enter Aadhar Nuber" required>
+        <button type = "button" id="numberOtp" class="otp">Send OTP</button>
+        <input type="text" id="enterNumberOtp" placeholder="Enter OTP" required>
+        <input type="text" id="phoneNumber" placeholder="Phone Number" required>
+        <button type = "button" id="numberOtp1" class="otp">Send OTP</button>
+        <input type="text" id="enterNumberOtp" placeholder="Enter OTP" required>
+        <input type="text" id="email" placeholder="Enter your Email id">
+        <button type = "button" id="emailOtp" class="otp">Send OTP</button>
+        <input type="text" id="emailOtp1" placeholder="Enter OTP" required>
+        <button type = "button" id="nextButton" class="next">Next</button>
+        </form>
+    </div>
+
+    <div id="PatientDetails" class="page hidden">
+        <form>
+        <h1>Patient Details</h1>
+        <table border="2" cellspacing="0" cellpadding="5">
+            <tr>
+                <td>Name</td>
+                <td>Ramalingaswamy</td>
+            </tr>
+            <tr>
+                <td>Age</td>
+                <td>50-60</td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>Male</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>abc layout, Mysore</td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td>+919441881952</td>
+            </tr>
+        </table>
+        <input type="text" id="AlternatePhoneNumber" placeholder="Alternate Phone Number" class="apn" required>
+        <button id="nextButton" class="next">Next</button>
+        </form>
+    </div>
+
+    <div id="PatientHomePage" class="page hidden"> 
+        <h1>Ramalingaswamy</h1>
+        <p>Mysore</p>
+        <h2>Always Caring</h2>
+        <h3>Our Services</h3>
+        <img src="nurse.png" id="nurses" height="100px" width="100px">
+        <img src="appointment.png" id="appointments" height="100px" width="100px">
+        <img src="beds.png" id="Beds" class="beds" height="100px" width="100px">
+        <img src="medicine.png" id="Medicines" class="medicine" height="100px">
+        <img src="medicalrecord.png" id="MedicalRecord" class="medicalrecord" height="100px">
+        <img src="insurance.png" id="Insurance" class="insurance" height="100px">
+    </div>
+
+    <div>
+        <div class="page hidden">
+            <h2>Your Issues Are:</h2>
+             <input
+              <li> ____________________</li>
+              <li>3. ____________________</li>
+              <li>4. ____________________</li>
+            </ul>>
+        </div>
+    </div>
+
+    <div id="appointmentPatient" class="page hidden">
+        <img src="profile.png" class="profile" >
+        <h1>Ramalingaswamy</h1>
+        <h4>Mysore</h4>
+        <h3>Book your,</h3>
+        <h2>Appointments</h2>
+        <h2>Hospitals</h2>
+        <label for="hospital">Select Hospital</label>
+<select id="hospiatlNames" name="hospiatlNames">
+  <option value="jssMysore">JSS Hospital, Mysore</option>
+  <option value="KamakshiMysore">Kamakshi Hospital Mysore</option>
+  <option value="secureMysore">Secure Hospital Mysore</option>
+  <option value="NarayanaMysore">Narayana Hospital Mysore</option>
+  <option value="jayadevaMysore">Jayadev Hsopital Mysore</option>
+</select>
+
+        <h2>Doctors</h2>
+        <label for="doctors">Select Doctor:</label>
+<select id="Doctors" name="Doctor">
+  <option value="shashicardiomysore">Dr.Shashidhar, Cardiologist, Mysore</option>
+  <option value="samarthpediamysore">Dr.Samarth, Pediatrics, Mysore</option>
+  <option value="java">Java</option>
+  <option value="cpp">C++</option>
+  <option value="html">HTML</option>
+</select>
+<button class="booknow">Book Now</button>
+    </div>
+
+    <div id="appointschedule" class="page hidden">
+        <h2 style="text-align: center;">October 2024</h2>
+
+<div class="calendar">
+  <!-- Days of the Week -->
+  <div class="day">Sun</div>
+  <div class="day">Mon</div>
+  <div class="day">Tue</div>
+  <div class="day">Wed</div>
+  <div class="day">Thu</div>
+  <div class="day">Fri</div>
+  <div class="day">Sat</div>
+
+  <!-- Empty Slots for Previous Month -->
+  <div class="date"></div><div class="date"></div><div class="date"></div>
+  <div class="date"></div><div class="date"></div><div class="date"></div>
+
+  <!-- Dates of October 2024 -->
+  <div class="date">1</div><div class="date">2</div><div class="date">3</div>
+  <div class="date">4</div><div class="date">5</div><div class="date">6</div>
+  <div class="date">7</div><div class="date">8</div><div class="date">9</div>
+  <div class="date">10</div><div class="date">11</div><div class="date">12</div>
+  <div class="date">13</div><div class="date">14</div><div class="date">15</div>
+  <div class="date">16</div><div class="date">17</div><div class="date">18</div>
+  <div class="date">19</div><div class="date">20</div><div class="date">21</div>
+  <div class="date">22</div><div class="date">23</div><div class="date">24</div>
+  <div class="date">25</div><div class="date">26</div><div class="date">27</div>
+  <div class="date">28</div><div class="date">29</div><div class="date">30</div>
+  <div class="date">31</div>
+</div>
+<button class="booknow">Book Now</button>
+</div>
+
+    <div id="appointmentconfirmingpage" class="page hidden">
+        <img src="profile.png" class="profile" >
+        <h1>Ramalingaswamy</h1>
+        <h4>Mysore</h4>
+        <h1>Appointment Details</h1>
+        <h3>Doctor name:Dr.Shashidhar </h3>
+        <h3>Department: Cardiologist</h3>
+        <h3>Experiance: 16 years</h3>
+        <h3>Date: 26/06/2024</h3>
+        <h3>Hospital name: JSS, Hospital</h3>
+        <h3>Issues: Record.pdf</h3>
+        <button class="booknow">Confirm</button>
+    </div>
+
+    <div id="confirmpage" class="page hidden">
+        <img src="profile.png" class="profile" >
+        <h1>Ramalingaswamy</h1>
+        <h4>Mysore</h4>
+        <h3>Doctor name:Dr.Shashidhar</h3>
+        <h3>Hospital: JSS, Hospital</h3>
+        <h3>Date: 26/06/2024</h3>
+        <h3>Time: 5:30pm</h3>
+        <h3>Consultation fees: Rs. 700</h3>
+        <button class="pdf">Download pdf</button>
+    </div>
+
+    <div id="interns" class="page hidden">
+    <img src="profile.png" class="profile">
+    <h3>Hello</h3>
+    <form>
+    <input type="text" id="registernumber" placeholder="Enter Register Number">
+    <input type="text" id="phoneNumber" placeholder="enter your phone number">
+    <button class="otp">Send OTP</button>
+    <input type="text " id="enterNumberOtp" placeholder="Enter OTP">
+    <input type="text" id="email" placeholder="Enter Your Email">
+    <button class="otp">Send OTP</button>
+    <input type="text" id="emailOtp" placeholder="Enter ">
+    <input type="text " id="enterNumberOtp" placeholder="Enter OTP">
+    <button class="next">Next</button>
+    </div>
+
+    <div id="internsdocument" class="page hidden">
+        <h1>Hello</h1>
+        <h2>Dr. XYZ</h2>
+        <input type="text" id="document1" placeholder="Upload your certificate" required>
+        <button class="upload">Upload</button>
+        <label></label>
+        <input type="text" id="document2" placeholder="Upload your Licence document" required>
+        <button class="upload">Upload</button>
+        <p>Your documents</p>
+        <img src="documents.png" class="document1">
+    </div>
+
+    <div></div>
+    <script src="hm.js"></script>
+    <img src="logo1.png" class="watermark">
+</body>
+</html>

@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+
+    .watermark{
+        position: absolute;
+    opacity: 0.1; /* Transparency */
+    width: 700px; /* Adjust as needed */
+    }
+}
+
+.page {
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.welcome-title {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.healthmate-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2f2f8e;
+    margin-bottom: 30px;
+}
+
+.button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2f2f8e;
+    color: #ffffff;
+    font-size: 16px;
+    margin-top: 15px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #3b3b9d;
+}
+
+.or-text {
+    font-size: 14px;
+    color: #999;
+    margin: 15px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="password"] {
+    margin-top: 2px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #2f2f8e;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.sign-in-btn, .sign-up-btn, .otp, .next, .upload, .selectTime, .booknow, .pdf {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #2f2f8e;
+    transition: background-color 0.3s ease;
+}
+
+.sign-in-btn {
+    margin-top: 10px;
+}
+
+.sign-up-btn {
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #3b3b9d;
+}
+
+.signup-text {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #000000;
+}
+
+.booknow{
+    margin-top: 10px;
+}
+.sign-heading{
+    margin-top: px;
+    font-size: 40px;
+    color: #000000;
+}
+
+.back-container {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+}
+
+.profile-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.terms input {
+    margin-right: 10px;
+}
+
+.issues-text {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+
+.issues-text a {
+    color: #2f2f8e;
+    text-decoration: none;
+}
+
+.issues-text a:hover {
+    text-decoration: underline;
+}
+
+#nurses {
+    position: absolute;
+    top: 250px;   /* Distance from the top */
+    left: 200px; /* Distance from the left */
+}
+
+#appointments {
+    position: absolute;
+    top: 250px;   /* Distance from the top */
+    left: 50px; /* Distance from the left */
+}
+
+#userpng{
+    height: 50px;
+    position: absolute;
+    top: 100px;   /* Distance from the top */
+    left: 300px; /* Distance from the left */ 
+}
+
+#Insurance{
+    position: absolute;
+    margin-top: 10px;
+}
+
+#Beds{
+    margin-top: 90px;
+}
+.checkbox{
+    margin-top: 10px;
+}
+
+.clickhere{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #2f2f8e;
+    background-color: #ffffff;
+}
+
+.user{
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.otp{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 300px;
+}
+
+.numotp{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.document1{
+    height: 200px;
+    margin-top: 2px;
+}
+
+.apn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    width: 300px;
+    margin: auto;
+  }
+  .day, .date {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  .day {
+    font-weight: bold;
+    background-color: #f0f0f0;
+  }
